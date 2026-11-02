@@ -15,7 +15,7 @@ export function createApp() {
 
   if (env.NODE_ENV === 'production') {
     const currentDirectory = path.dirname(fileURLToPath(import.meta.url))
-    const webDistPath = path.resolve(currentDirectory, '../../../web/dist')
+    const webDistPath = path.resolve(currentDirectory, '../../web/dist')
     const webIndexHtml = fs.readFileSync(path.join(webDistPath, 'index.html'), 'utf-8')
 
     app.use(express.static(webDistPath))
